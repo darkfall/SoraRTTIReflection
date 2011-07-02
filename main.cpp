@@ -1,13 +1,8 @@
 #include <iostream>
 
-#include <vector>
-#include <fstream>
-
 #include "SoraRTTI.h"
 
 #include <cassert>
-
-using namespace std;
 
 class Foo {
 public:
