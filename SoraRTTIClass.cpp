@@ -31,6 +31,8 @@
 #include "SoraRTTIClass.h"
 #include "SoraRTTIClassManager.h"
 
+#include <algorithm>
+
 namespace sora {
 	
 	SoraRTTIDerivedType::SoraRTTIDerivedType(SoraRTTIClassDescriptor* derviedClass,

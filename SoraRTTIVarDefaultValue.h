@@ -140,17 +140,17 @@ namespace sora {
 	};
 	
 	template<>
-	class RTTIDefaultValue<int64_t> {
+	class RTTIDefaultValue<int64> {
 	public:
-		static int64_t Default() {
+		static int64 Default() {
 			return 0;
 		}
 	};
 	
 	template<>
-	class RTTIDefaultValue<uint64_t> {
+	class RTTIDefaultValue<uint64> {
 	public:
-		static uint64_t Default() {
+		static uint64 Default() {
 			return 0;
 		}
 	};

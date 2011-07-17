@@ -33,6 +33,14 @@
 #include "SoraRTTIType.h"
 
 namespace sora {
+
+#ifdef _MSC_VER
+	typedef signed __int64         int64;
+	typedef unsigned __int64       uint64;
+#else
+	typedef int64_t int64;
+	typedef uint64_t uint64;
+#endif
 	
 	template<class __C>
 	class RTTIClassTypeHelper {
@@ -96,12 +104,12 @@ namespace sora {
 	}
 	
 	template<>
-	inline SoraRTTIType* RTTITypeOf(int64_t&) {
+	inline SoraRTTIType* RTTITypeOf(int64&) {
 		return &SoraRTTIType::int64Type;
 	}
 	
 	template<>
-	inline SoraRTTIType* RTTITypeOf(uint64_t&) {
+	inline SoraRTTIType* RTTITypeOf(uint64&) {
 		return &SoraRTTIType::uint64Type;
 	}
 	
@@ -159,11 +167,11 @@ namespace sora {
 		return &SoraRTTIType::ulong32Type;
 	}
 	
-	inline SoraRTTIType* RTTITypeOfPtr(int64_t*) {
+	inline SoraRTTIType* RTTITypeOfPtr(int64*) {
 		return &SoraRTTIType::int64Type;
 	}
 	
-	inline SoraRTTIType* RTTITypeOfPtr(uint64_t*) {
+	inline SoraRTTIType* RTTITypeOfPtr(uint64*) {
 		return &SoraRTTIType::uint64Type;
 	}
 	
@@ -221,12 +229,12 @@ namespace sora {
 	}
 	
 	template<>
-	inline SoraRTTIType* RTTITypeOfPtr(int64_t const*const*) {
+	inline SoraRTTIType* RTTITypeOfPtr(int64 const*const*) {
 		return new SoraRTTIPtrType(&SoraRTTIType::int64Type);
 	}
 	
 	template<>
-	inline SoraRTTIType* RTTITypeOfPtr(uint64_t const*const*) {
+	inline SoraRTTIType* RTTITypeOfPtr(uint64 const*const*) {
 		return new SoraRTTIPtrType(&SoraRTTIType::uint64Type);
 	}
 	

@@ -37,7 +37,7 @@
 
 namespace sora {
 	
-	typedef enum {
+    enum {
 		RTTI_FLAG_VIRTUAL	= 1,
 		RTTI_FLAG_STATIC	= 2,
 		RTTI_FLAG_PUBLIC	= 4,
